@@ -77,6 +77,7 @@
 		841495281FD5985500728D10 = {
 			isa = PBXGroup;
 			children = (
+				8468715E1FD6FFC000C6AAED /* Assets */,
 				841495331FD5985500728D10 /* ARpasKit */,
 				841495481FD5985500728D10 /* ARpasKitTests */,
 				841495531FD5985500728D10 /* ARpasKitUITests */,
@@ -123,6 +124,13 @@
 				841495561FD5985500728D10 /* Info.plist */,
 			);
 			path = ARpasKitUITests;
+			sourceTree = "<group>";
+		};
+		8468715E1FD6FFC000C6AAED /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
