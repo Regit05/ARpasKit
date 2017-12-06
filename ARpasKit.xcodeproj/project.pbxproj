@@ -14,6 +14,9 @@
 		8414953F1FD5985500728D10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8414953D1FD5985500728D10 /* LaunchScreen.storyboard */; };
 		8414954A1FD5985500728D10 /* ARpasKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841495491FD5985500728D10 /* ARpasKitTests.swift */; };
 		841495551FD5985500728D10 /* ARpasKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841495541FD5985500728D10 /* ARpasKitUITests.swift */; };
+		846871601FD7FBAF00C6AAED /* forme.scn in Resources */ = {isa = PBXBuildFile; fileRef = 8468715F1FD7FBAF00C6AAED /* forme.scn */; };
+		846871621FD7FC3C00C6AAED /* test.scn in Resources */ = {isa = PBXBuildFile; fileRef = 846871611FD7FC3C00C6AAED /* test.scn */; };
+		849624311FD84E2C0094BF79 /* Wolf_dae.dae in Resources */ = {isa = PBXBuildFile; fileRef = 849624301FD84E2C0094BF79 /* Wolf_dae.dae */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		841495501FD5985500728D10 /* ARpasKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARpasKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		841495541FD5985500728D10 /* ARpasKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARpasKitUITests.swift; sourceTree = "<group>"; };
 		841495561FD5985500728D10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8468715F1FD7FBAF00C6AAED /* forme.scn */ = {isa = PBXFileReference; lastKnownFileType = file; path = forme.scn; sourceTree = "<group>"; };
+		846871611FD7FC3C00C6AAED /* test.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = test.scn; sourceTree = "<group>"; };
+		849624301FD84E2C0094BF79 /* Wolf_dae.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = Wolf_dae.dae; path = "../../../../../../Downloads/Wolf Rigged and Game Ready/Wolf_dae.dae"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +105,10 @@
 			isa = PBXGroup;
 			children = (
 				841495341FD5985500728D10 /* AppDelegate.swift */,
+				849624301FD84E2C0094BF79 /* Wolf_dae.dae */,
 				841495361FD5985500728D10 /* ViewController.swift */,
 				841495381FD5985500728D10 /* Main.storyboard */,
+				846871611FD7FC3C00C6AAED /* test.scn */,
 				8414953B1FD5985500728D10 /* Assets.xcassets */,
 				8414953D1FD5985500728D10 /* LaunchScreen.storyboard */,
 				841495401FD5985500728D10 /* Info.plist */,
@@ -129,6 +137,7 @@
 		8468715E1FD6FFC000C6AAED /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				8468715F1FD7FBAF00C6AAED /* forme.scn */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -240,6 +249,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				846871621FD7FC3C00C6AAED /* test.scn in Resources */,
+				849624311FD84E2C0094BF79 /* Wolf_dae.dae in Resources */,
+				846871601FD7FBAF00C6AAED /* forme.scn in Resources */,
 				8414953F1FD5985500728D10 /* LaunchScreen.storyboard in Resources */,
 				8414953C1FD5985500728D10 /* Assets.xcassets in Resources */,
 				8414953A1FD5985500728D10 /* Main.storyboard in Resources */,
@@ -436,11 +448,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 765NU7MU2H;
+				DEVELOPMENT_TEAM = G5ULQ46TQV;
 				INFOPLIST_FILE = ARpasKit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = admin.ARpasKit;
+				PRODUCT_BUNDLE_IDENTIFIER = admin.ARpasKitGuillaume;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -454,11 +466,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 765NU7MU2H;
+				DEVELOPMENT_TEAM = G5ULQ46TQV;
 				INFOPLIST_FILE = ARpasKit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = admin.ARpasKit;
+				PRODUCT_BUNDLE_IDENTIFIER = admin.ARpasKitGuillaume;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
