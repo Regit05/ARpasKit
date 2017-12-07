@@ -18,6 +18,16 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     var on = false
     
+    func createScene(){
+        // Create a new scene
+        
+        let scene = SCNScene()
+        
+        // Set the scene to the view
+        
+        sceneView.scene = scene
+    }
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -38,19 +48,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         sceneView.antialiasingMode = .multisampling4X
         
-        
-        
-        // Create a new scene
-        
-        let scene = SCNScene()
-        
-        
-        
-        // Set the scene to the view
-        
-        sceneView.scene = scene
-        
-        
+        createScene()
         
         /*let modelScene = SCNScene(named:
             
@@ -240,8 +238,21 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 // DispatchQueue.main.async {
                     
                     //let modelClone = self.nodeModel.clone()
-            if on != true { 
+            if on == true {
+                //createScene()
+                //sceneView.session.pause()
+                sceneView.scene.rootNode.enumerateChildNodes { (existantnode, stop) in
+                    if existantnode.name == "TechnicLEGO_CAR_1" {
+                        print("eff")
+                        existantnode.removeFromParentNode()
+                        on = false
+                    }
+                }
+                //createNodeObject()
+            }
+            
                     if let modelClone = self.createNodeObject() {
+                        print("crea")
                         on = true
                         let c = modelClone.clone()
                         c.position = node.position
@@ -252,11 +263,11 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                         node.addChildNode(c)
                         //node.rotation = SCNVector4Make(1, 0.0, 0.0, -Float.pi / 2.0)
                         print(node.rotation)
-                //    }
-            }
+                    }
+            
                     
                 
-          }
+          
             
             
             /*let plane = SCNPlane(width: CGFloat(anchor.extent.x), height: CGFloat(anchor.extent.z))
