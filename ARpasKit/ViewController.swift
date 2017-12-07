@@ -14,10 +14,6 @@ import SceneKit
 class ViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet var sceneView: ARSCNView!
     
-    
-    
-    var nodeModel:SCNNode!
-    
     let nodeName = "cherub"
     
     
@@ -66,10 +62,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
     }
     
-    func createNodeObject() -> SCNNode {
-        let modelScene = SCNScene(named:"Wolf_dae.dae")!
+    func createNodeObject() -> SCNNode? {
+        let modelScene = SCNScene(named:"test.scn")!
         
-        nodeModel =  modelScene.rootNode
+        let nodeModel =  modelScene.rootNode.childNode(withName: "sphere", recursively: true)
         
         return nodeModel
     }
@@ -85,7 +81,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Create a session configuration
         
         let configuration = ARWorldTrackingConfiguration()
-        
+        configuration.planeDetection = .horizontal
         
         
         // Run the view's session
@@ -122,8 +118,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-        
-        
         let location = touches.first!.location(in: sceneView)
         
         
@@ -140,7 +134,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         
         
-        if let hit = hitResults.first {
+        /*if let hit = hitResults.first {
             
             if let node = getParent(hit.node) {
                 
@@ -150,7 +144,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 
             }
             
-        }
+        }*/
         
         
         
@@ -161,27 +155,44 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         
         if let hit = hitResultsFeaturePoints.first {
+            if let currentFrame = sceneView.session.currentFrame {
+                // Create a transform with a translation of 0.2 meters in front
+                // of the camera
+                var translation = matrix_identity_float4x4
+                translation.columns.3.z = -0.2
+                let transform = simd_mul(
+                    currentFrame.camera.transform,
+                    translation
+                )
+                // Add a new anchor to the session
+                // let anchor = ARAnchor(transform: transform)
+                let anchor = ARAnchor(transform: hit.worldTransform)
+                sceneView.session.add(anchor: anchor)
+                
+                /*print(anchor)
+                if let planeAnchor = anchor as? ARAnchor{
+                    print(planeAnchor.transform)
+                } else {
+                    print("not good")
+                }*/
+            }
             
             
-            
+            /*
             // Get the rotation matrix of the camera
             
-            let rotate = simd_float4x4(SCNMatrix4MakeRotation(sceneView.session.currentFrame!.camera.eulerAngles.y, 0, 1, 0))
-            
-            
+            //let rotate = simd_float4x4(SCNMatrix4MakeRotation(sceneView.session.currentFrame!.camera.eulerAngles.y, 0, 1, 0))
             
             // Combine the matrices
             
-            let finalTransform = simd_mul(hit.worldTransform, rotate)
+            //let finalTransform = simd_mul(hit.worldTransform, rotate)
             
-            sceneView.session.add(anchor: ARAnchor(transform: finalTransform))
+            // sceneView.session.add(anchor: ARAnchor(transform: finalTransform))
             
-            //sceneView.session.add(anchor: ARAnchor(transform: hit.worldTransform))
+            sceneView.session.add(anchor: ARAnchor(transform: hit.worldTransform))
+            */
             
         }
-        
-        
-        
     }
     
     
@@ -214,23 +225,55 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         
-        if !anchor.isKind(of: ARPlaneAnchor.self) {
+        // Si on detecte le plan on incremente
+        // si on touche et que le plan detecte alors on place objet
+        var planeDetection = 0
+        if let plane = anchor as? ARPlaneAnchor {
             
-            DispatchQueue.main.async {
+            planeDetection = planeDetection + 1
+        //recuperer la position du node associe a une ancre
+       // if let anchorNode = sceneView.node(for: anchor) {
+                //let plane = anchor as! ARPlaneAnchor
+                print(anchor.transform)
                 
-                //let modelClone = self.nodeModel.clone()
+                // DispatchQueue.main.async {
+                    
+                    //let modelClone = self.nodeModel.clone()
+                    
+                    if let modelClone = self.createNodeObject() {
+                    
+                        modelClone.position = node.position
+                    
+                    
+                    // Add model as a child of the node
+                    
+                        node.addChildNode(modelClone.clone())
+                //    }
+                    
                 
-                let modelClone = self.createNodeObject()
-                
-                modelClone.position = SCNVector3Zero
-                
-                
-                
-                // Add model as a child of the node
-                
-                node.addChildNode(modelClone)
-                
-            }
+          }
+            
+            
+            /*let plane = SCNPlane(width: CGFloat(anchor.extent.x), height: CGFloat(anchor.extent.z))
+            let planeNode = SCNNode(geometry: plane)
+            planeNode.simdPosition = float3(anchor.center.x, 0, anchor.center.z)
+            
+            /*
+             `SCNPlane` is vertically oriented in its local coordinate space, so
+             rotate the plane to match the horizontal orientation of `ARPlaneAnchor`.
+             */
+            planeNode.eulerAngles.x = -.pi / 2
+            
+            // Make the plane visualization semitransparent to clearly show real-world placement.
+            planeNode.opacity = 0.25
+            
+            /*
+             Add the plane visualization to the ARKit-managed node so that it tracks
+             changes in the plane anchor as plane estimation continues.
+             */
+            node.addChildNode(planeNode)*/
+            
+            
             
         }
         
