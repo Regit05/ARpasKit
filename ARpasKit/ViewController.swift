@@ -16,7 +16,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     let nodeName = "cherub"
     
-    
+    var on = false
     
     override func viewDidLoad() {
         
@@ -63,9 +63,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     
     func createNodeObject() -> SCNNode? {
-        let modelScene = SCNScene(named:"test.scn")!
+        let modelScene = SCNScene(named:"animation_voiture.scn")!
         
-        let nodeModel =  modelScene.rootNode.childNode(withName: "sphere", recursively: true)
+        let nodeModel =  modelScene.rootNode.childNode(withName: "TechnicLEGO_CAR_1", recursively: true)
+        //nodeModel?.rotation = SCNVector4Make(1, 0, 0, -Float.pi / 2.0)
         
         return nodeModel
     }
@@ -234,21 +235,25 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         //recuperer la position du node associe a une ancre
        // if let anchorNode = sceneView.node(for: anchor) {
                 //let plane = anchor as! ARPlaneAnchor
-                print(anchor.transform)
+                //print(anchor.transform)
                 
                 // DispatchQueue.main.async {
                     
                     //let modelClone = self.nodeModel.clone()
-                    
+            if on != true {
                     if let modelClone = self.createNodeObject() {
-                    
-                        modelClone.position = node.position
-                    
+                        on = true
+                        let c = modelClone.clone()
+                        c.position = node.position
+                        c.rotation = SCNVector4Make(0, 1.0, 0.0, -Float.pi)
                     
                     // Add model as a child of the node
-                    
-                        node.addChildNode(modelClone.clone())
+                        print(c.rotation)
+                        node.addChildNode(c)
+                        //node.rotation = SCNVector4Make(1, 0.0, 0.0, -Float.pi / 2.0)
+                        print(node.rotation)
                 //    }
+            }
                     
                 
           }

@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ARpasKit/ViewController.swift"
-            timestampString = "534345261.313508"
+            timestampString = "534355961.964583"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "68"
@@ -26,39 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ARpasKit/ViewController.swift"
-            timestampString = "534345261.314139"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "237"
-            endingLineNumber = "237"
-            landmarkName = "renderer(_:didAdd:for:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ARpasKit/ViewController.swift"
-            timestampString = "534345261.314461"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "157"
-            endingLineNumber = "157"
-            landmarkName = "touchesBegan(_:with:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ARpasKit/ViewController.swift"
-            timestampString = "534345261.314757"
+            timestampString = "534355961.965289"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "238"
@@ -74,12 +42,60 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ARpasKit/ViewController.swift"
-            timestampString = "534345261.315043"
+            timestampString = "534355961.965672"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "226"
-            endingLineNumber = "226"
+            startingLineNumber = "158"
+            endingLineNumber = "158"
+            landmarkName = "touchesBegan(_:with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ARpasKit/ViewController.swift"
+            timestampString = "534355961.966007"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "239"
+            endingLineNumber = "239"
             landmarkName = "renderer(_:didAdd:for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ARpasKit/ViewController.swift"
+            timestampString = "534355961.966332"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "227"
+            endingLineNumber = "227"
+            landmarkName = "renderer(_:didAdd:for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ARpasKit/ViewController.swift"
+            timestampString = "534355961.96664"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

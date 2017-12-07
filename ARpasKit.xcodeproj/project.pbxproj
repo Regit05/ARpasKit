@@ -16,6 +16,8 @@
 		841495551FD5985500728D10 /* ARpasKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841495541FD5985500728D10 /* ARpasKitUITests.swift */; };
 		846871601FD7FBAF00C6AAED /* forme.scn in Resources */ = {isa = PBXBuildFile; fileRef = 8468715F1FD7FBAF00C6AAED /* forme.scn */; };
 		846871621FD7FC3C00C6AAED /* test.scn in Resources */ = {isa = PBXBuildFile; fileRef = 846871611FD7FC3C00C6AAED /* test.scn */; };
+		849624361FD977540094BF79 /* animation_voiture.dae in Resources */ = {isa = PBXBuildFile; fileRef = 849624351FD977530094BF79 /* animation_voiture.dae */; };
+		849624381FD977A40094BF79 /* animation_voiture.scn in Resources */ = {isa = PBXBuildFile; fileRef = 849624371FD977A40094BF79 /* animation_voiture.scn */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		8468715F1FD7FBAF00C6AAED /* forme.scn */ = {isa = PBXFileReference; lastKnownFileType = file; path = forme.scn; sourceTree = "<group>"; };
 		846871611FD7FC3C00C6AAED /* test.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = test.scn; sourceTree = "<group>"; };
 		849624341FD93B2B0094BF79 /* Wolf_dae.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = Wolf_dae.scn; path = "../../../../../../Downloads/Wolf Rigged and Game Ready/Wolf_dae.scn"; sourceTree = "<group>"; };
+		849624351FD977530094BF79 /* animation_voiture.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = animation_voiture.dae; path = ../../../../../../Downloads/animation_voiture.dae; sourceTree = "<group>"; };
+		849624371FD977A40094BF79 /* animation_voiture.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = animation_voiture.scn; path = ../../../../../../Downloads/animation_voiture.scn; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				841495341FD5985500728D10 /* AppDelegate.swift */,
 				849624341FD93B2B0094BF79 /* Wolf_dae.scn */,
 				841495361FD5985500728D10 /* ViewController.swift */,
+				849624351FD977530094BF79 /* animation_voiture.dae */,
+				849624371FD977A40094BF79 /* animation_voiture.scn */,
 				841495381FD5985500728D10 /* Main.storyboard */,
 				846871611FD7FC3C00C6AAED /* test.scn */,
 				8414953B1FD5985500728D10 /* Assets.xcassets */,
@@ -248,10 +254,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				849624381FD977A40094BF79 /* animation_voiture.scn in Resources */,
 				846871621FD7FC3C00C6AAED /* test.scn in Resources */,
 				846871601FD7FBAF00C6AAED /* forme.scn in Resources */,
 				8414953F1FD5985500728D10 /* LaunchScreen.storyboard in Resources */,
 				8414953C1FD5985500728D10 /* Assets.xcassets in Resources */,
+				849624361FD977540094BF79 /* animation_voiture.dae in Resources */,
 				8414953A1FD5985500728D10 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
