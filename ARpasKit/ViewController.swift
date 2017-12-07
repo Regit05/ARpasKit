@@ -240,7 +240,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 // DispatchQueue.main.async {
                     
                     //let modelClone = self.nodeModel.clone()
-            if on != true {
+            if on != true { 
                     if let modelClone = self.createNodeObject() {
                         on = true
                         let c = modelClone.clone()
